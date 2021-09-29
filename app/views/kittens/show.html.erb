@@ -1,0 +1,19 @@
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Cuteness</th>
+    <th>Softness</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @kitten.name %></td>
+      <td><%= @kitten.age %></td>
+      <td><%= @kitten.cuteness %></td>
+      <td><%= @kitten.softness %></td>
+      <td><%= link_to "Back", kittens_path %></td>
+      <td><%= link_to "Edit", edit_kitten_path(@kitten) %></td>
+      <td><%= link_to "Destroy", @kitten, method: :delete, data: { confirm: "Are you sure?" } %></td>
+    </tr>
+  </tbody>
+</table>
