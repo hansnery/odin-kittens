@@ -9,3 +9,9 @@
   <%= f.text_field :softness %>
   <%= f.submit %>
 <% end %>
+<% if current_page?("kittens#edit") %>
+  <%= link_to "Back", @kitten %>
+<% else %>
+  <%= link_to "Back", kittens_path %>
+<% end %>
+<%= link_to "Destroy", @kitten, method: :delete, data: { confirm: "Are you sure?" } %>
